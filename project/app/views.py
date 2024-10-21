@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 
 
@@ -20,6 +20,7 @@ def fun4(request,a,b,c):
     else :
         return HttpResponse(c)
     
+    
 
     
 def index_page(req):
@@ -36,3 +37,13 @@ def demo(req):
 
 def second(req):
     return render(req,'second.html')
+
+todo=[]
+def todo1(request):
+    if request.method=='POST':
+        id=request.POST['id']
+        task=request.POST['task']
+        todo.append({'id':id,'task':task})
+        print(todo)
+        return redirect(todo1)
+    return render(request,'todo.html',{'todo1':todo})

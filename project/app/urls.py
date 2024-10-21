@@ -9,4 +9,5 @@ urlpatterns = [
     path('index',views.index_page),
     path('demo',views.demo),
     path('sec',views.second),
+    path('todo',views.todo1)
 ]
