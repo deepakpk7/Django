@@ -20,21 +20,22 @@
             <input class="btn" type="submit" value="Submit">
 
         </form>
-
+    </div>
+    <div class="second">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Task</th>
+            </tr>
+            {% for i in todo1 %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.task}}</td>
+            </tr>
+            {% endfor %}
+        </table>
 
     </div>
     
-    <!-- <table>
-        <tr>
-            <th>ID</th>
-            <th>Task</th>
-        </tr>
-        {% for i in todo1 %}
-        <tr>
-            <td>{{i.id}}</td>
-            <td>{{i.task}}</td>
-        </tr>
-        {% endfor %}
-    </table> -->
 </body>
 </html>
