@@ -8,16 +8,23 @@
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
 </head>
 <body>
-    <h1><center>Welcome</center></h1>
-    <form action="" method="post">
-        {% csrf_token %}
-        <input type="text" placeholder="ID" name="id">
-        <input type="text" placeholder="Task" name="task">
-        <input type="submit" value="Submit">
+    <div class="container">
+        <h1><center>Welcome</center></h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="id">ID</label>
+            <input type="text" class="input" placeholder="Enter your ID" name="id">
+            <label for="task">Task</label>
+            <input type="text" class="input" placeholder="Enter the Task" name="task">
 
-    </form>
+            <input class="btn" type="submit" value="Submit">
 
-    <table>
+        </form>
+
+
+    </div>
+    
+    <!-- <table>
         <tr>
             <th>ID</th>
             <th>Task</th>
@@ -28,6 +35,6 @@
             <td>{{i.task}}</td>
         </tr>
         {% endfor %}
-    </table>
+    </table> -->
 </body>
 </html>
