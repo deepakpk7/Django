@@ -38,7 +38,7 @@ def demo(req):
 def second(req):
     return render(req,'second.html')
 
-todo=[]
+todo=[{'id':'1','task':'task1'},{'id':'2','task':'task2'}]
 def todo1(request):
     if request.method=='POST':
         id=request.POST['id']
@@ -47,3 +47,24 @@ def todo1(request):
         print(todo)
         return redirect(todo1)
     return render(request,'todo.html',{'todo1':todo})
+
+def edit_form(req,id):
+    task=''
+    for i in todo:
+        if i['id']==id:
+            task=i
+    if req.method=='POST':
+        id=req.POST['id']
+        task1=req.POST['task']
+        task['id']=id
+        task['task']=task1
+        print(todo)
+        return redirect(todo1)
+    return render(req,'edit.html',{'task':task})
+
+def delete_fun(req,id):
+    for i in todo:
+        if i['id']==id:
+            todo.remove(i)
+    return redirect(todo1)  
+    

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1><center>Edit</center></h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="id">ID</label>
+            <input type="text" class="input" placeholder="Enter your new ID" name="id" value="{{task.id}}">
+            <label for="task">Task</label>
+            <input type="text" class="input" placeholder="Enter the new Task" name="task" value="{{task.task}}">
+
+            <input class="btn" type="submit" value="Submit">
+
+        </form>
+    </div>
+    
+    
+</body>
+</html>
