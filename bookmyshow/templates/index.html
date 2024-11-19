@@ -73,9 +73,14 @@
             <!-- Carousel Items -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../BookMyShow/media/cauosal_playcardnewweb.avif" class="d-block w-100" alt="">
+                    <img src="{% static 'img/cauosal_playcardnewweb.avif' %}" class="d-block w-100" alt="">
                 </div>
-                
+                <div class="carousel-item">
+                    <img src="{% static 'img/cauosal_2.avif' %}" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/top.avif' %}" class="d-block w-100" alt="">
+                </div>
             </div>
             <!-- Controls (Previous/Next) -->
             <button id="cbutton" class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -104,7 +109,7 @@
                         <div class="col-md-3">
                             <a class="text-decoration-none text-black" href="ARM.html">
                                 <div class="movie-card">
-                                    <img src="../BookMyShow/media/ARM.avif" class="img-fluid" alt="A.R.M">
+                                    <img src="{% static 'img/ARM.avif '%}" class="img-fluid" alt="A.R.M">
                                     <div class="movie-details">
                                         <h5 class="movie-title">A.R.M</h5>
                                         <p class="movie-genre">Action/Adventure/Drama</p>
@@ -248,7 +253,6 @@
                     </div>
                 </div>
     
-                <!-- Additional carousel-item for more movies -->
                 <div class="carousel-item">
                     <div class="row justify-content-center">
                         <div class="col-6 col-sm-4 col-md-3 mb-3 position-relative">
